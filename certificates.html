@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>گواهی‌نامه‌ها | OHAD MEDICAL PRODUCTS</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Vazirmatn", sans-serif;
+      background: #f4f8fa;
+      color: #17313b;
+    }
+
+    header {
+      background: #fff;
+      padding: 22px 7%;
+      border-bottom: 1px solid #e2ebef;
+    }
+
+    .brand {
+      color: #17313b;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-decoration: none;
+    }
+
+    .brand small {
+      display: block;
+      margin-top: 5px;
+      color: #71838b;
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: auto;
+      padding: 55px 24px 70px;
+    }
+
+    .heading {
+      text-align: center;
+      margin-bottom: 38px;
+    }
+
+    .heading span {
+      color: #168b91;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    h1 {
+      margin: 10px 0;
+      font-size: clamp(26px, 4vw, 36px);
+    }
+
+    .heading p {
+      color: #6b7e86;
+      line-height: 2;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .certificate {
+      background: #fff;
+      padding: 12px;
+      border: 1px solid #e1eaee;
+      border-radius: 18px;
+      box-shadow: 0 8px 25px rgba(22, 57, 70, 0.06);
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .certificate:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 32px rgba(22, 57, 70, 0.12);
+    }
+
+    .certificate img {
+      display: block;
+      width: 100%;
+      height: 300px;
+      object-fit: contain;
+      background: #f8fafb;
+      border-radius: 10px;
+      cursor: zoom-in;
+    }
+
+    .certificate p {
+      margin: 14px 4px 5px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 35px;
+      padding: 11px 20px;
+      border-radius: 10px;
+      background: #168b91;
+      color: white;
+      text-decoration: none;
+    }
+
+    footer {
+      padding: 20px;
+      text-align: center;
+      color: #71838b;
+      font-size: 12px;
+      border-top: 1px solid #e2ebef;
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 10;
+      background: rgba(8, 20, 26, .9);
+      align-items: center;
+      justify-content: center;
+      padding: 25px;
+    }
+
+    .lightbox.open {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 95%;
+      max-height: 85vh;
+      object-fit: contain;
+    }
+
+    .close {
+      position: absolute;
+      top: 15px;
+      left: 22px;
+      border: 0;
+      background: transparent;
+      color: white;
+      font-size: 36px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 800px) {
+      .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 520px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .certificate img {
+        height: 320px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a class="brand" href="index.html">
+      OHAD MEDICAL PRODUCTS
+      <small>MEDICAL & HOSPITAL EQUIPMENT</small>
+    </a>
+  </header>
+
+  <main>
+    <div class="heading">
+      <span>OUR CREDENTIALS</span>
+      <h1>گواهی‌نامه‌های شرکت اوحد</h1>
+      <p>مجوزها و گواهی‌نامه‌های شرکت را در این بخش مشاهده کنید.</p>
+    </div>
+
+    <div class="gallery">
+      <article class="certificate">
+        <img src="images/certificate-1.jpg.jpg" alt="گواهی‌نامه شماره یک" loading="lazy">
+        <p>گواهی‌نامه شماره ۱</p>
+      </article>
+
+      <article class="certificate">
+        <img src="images/certificate-2.jpg.jpg" alt="گواهی‌نامه شماره دو" loading="lazy">
+        <p>گواهی‌نامه شماره ۲</p>
+      </article>
+
+      <article class="certificate">
+        <img src="images/certificate-3.jpg.jpg" alt="گواهی‌نامه شماره سه" loading="lazy">
+        <p>گواهی‌نامه شماره ۳</p>
+      </article>
+    </div>
+
+    <a class="back" href="index.html">بازگشت به صفحه اصلی</a>
+  </main>
+
+  <footer>
+    OHAD MEDICAL PRODUCTS
+  </footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="نمایش بزرگ گواهی‌نامه">
+    <button class="close" id="closeLightbox" aria-label="بستن">&times;</button>
+    <img id="largeImage" src="" alt="نمایش بزرگ گواهی‌نامه">
+  </div>
+
+  <script>
+    const lightbox = document.getElementById("lightbox");
+    const largeImage = document.getElementById("largeImage");
+
+    document.querySelectorAll(".certificate img").forEach(img => {
+      img.addEventListener("click", () => {
+        largeImage.src = img.src;
+        largeImage.alt = img.alt;
+        lightbox.classList.add("open");
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove("open");
+      largeImage.src = "";
+    }
+
+    document.getElementById("closeLightbox").addEventListener("click", closeLightbox);
+
+    lightbox.addEventListener("click", event => {
+      if (event.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape") closeLightbox();
+    });
+  </script>
+  
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const images = document.querySelectorAll(
+      "img:not(.logo)"
+    );
+
+    if (!("IntersectionObserver" in window)) {
+      images.forEach(img => {
+        img.classList.add("certificate-image-visible");
+      });
+      return;
+    }
+
+    const style = document.createElement("style");
+    style.textContent = `
+      img:not(.logo) {
+        opacity: 0;
+        transform: translateY(18px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+
+      img.certificate-image-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        img:not(.logo) {
+          transition: none;
+          transform: none;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("certificate-image-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    images.forEach(img => observer.observe(img));
+  });
+</script>
+
+</body>
+</html>

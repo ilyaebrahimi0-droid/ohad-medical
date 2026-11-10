@@ -1,0 +1,430 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="معرفی آویز سقفی تیتان OHAD MEDICAL، مشخصات فنی و درخواست مشاوره خرید.">
+  <title>آویز تیتان | OHAD MEDICAL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #081b32;
+      --navy2: #102b49;
+      --teal: #27c8bc;
+      --bg: #f5f8fb;
+      --surface: #fff;
+      --text: #152a40;
+      --muted: #6b7d90;
+      --border: #cbd6e0;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Vazirmatn, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.9;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1120px, 92%); margin: auto; }
+    header {
+      background: var(--navy);
+      color: white;
+      border-bottom: 3px solid var(--teal);
+    }
+    .nav {
+      min-height: 78px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .brand { font-size: 20px; font-weight: 800; letter-spacing: .4px; }
+    .brand span { color: var(--teal); }
+    .back {
+      border: 1px solid #60758a;
+      border-radius: 10px;
+      padding: 7px 14px;
+      font-size: 13px;
+    }
+    .breadcrumb { color: var(--muted); font-size: 13px; padding: 22px 0; }
+    .breadcrumb a { color: #087f7c; }
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      align-items: center;
+      padding: 12px 0 42px;
+    }
+    .visual {
+      min-height: 390px;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background:
+        radial-gradient(ellipse at 50% 42%, rgba(39,200,188,.16), transparent 56%),
+        linear-gradient(145deg, #fff, #eaf1f6);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 28px;
+      text-align: center;
+      box-shadow: 0 18px 48px rgba(8,27,50,.07);
+    }
+    .visual-icon { font-size: 84px; line-height: 1.5; }
+    .visual strong { font-size: 18px; }
+    .visual small { color: var(--muted); max-width: 290px; margin-top: 8px; }
+    .eyebrow { color: #087f7c; font-size: 13px; font-weight: 700; }
+    h1 { font-size: clamp(30px, 4vw, 46px); line-height: 1.35; margin: 8px 0 4px; }
+    .english { color: var(--muted); font-size: 15px; direction: ltr; text-align: right; }
+    .intro { color: var(--muted); margin: 18px 0; }
+    .chips { display: flex; flex-wrap: wrap; gap: 9px; margin: 20px 0 26px; }
+    .chip {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 7px 12px;
+      font-size: 13px;
+    }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn {
+      border: 0;
+      border-radius: 11px;
+      padding: 12px 20px;
+      font: inherit;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .primary { background: var(--teal); color: var(--navy); }
+    .secondary { background: white; border: 1px solid var(--border); color: var(--text); }
+    section { padding: 32px 0; }
+    .section-title { font-size: 25px; margin: 0 0 6px; }
+    .section-sub { color: var(--muted); margin: 0 0 22px; }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+    .feature {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+    }
+    .feature .icon { font-size: 25px; }
+    .feature h3 { margin: 5px 0; font-size: 16px; }
+    .feature p { margin: 0; color: var(--muted); font-size: 14px; }
+    .specs {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+    .spec-row {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 14px;
+      padding: 13px 18px;
+      border-bottom: 1px solid var(--border);
+    }
+    .spec-row:last-child { border-bottom: 0; }
+    .spec-row span:first-child { color: var(--muted); }
+    .cta {
+      background: var(--navy);
+      color: white;
+      border-radius: 22px;
+      padding: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .cta p { color: #c4d2df; margin: 4px 0 0; }
+    footer { margin-top: 40px; background: #061426; color: #c4d2df; padding: 22px 0; font-size: 13px; }
+    @media (max-width: 720px) {
+      .hero { grid-template-columns: 1fr; gap: 22px; }
+      .visual { min-height: 290px; }
+      .features { grid-template-columns: 1fr; }
+      .spec-row { grid-template-columns: 1fr; gap: 0; }
+      .nav { min-height: 70px; }
+    }
+    .titan-hero-image {
+  width: 100%;
+  height: 100%;
+  max-height: 480px;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+}
+.titan-hero-image {
+  width: 100%;
+  height: 100%;
+  max-height: 480px;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+}
+/* افکت سه‌بعدی تصویر محصول */
+.titan-hero-image {
+  transition: transform .5s ease, filter .5s ease;
+  filter: drop-shadow(0 8px 18px rgba(0, 160, 255, .12));
+}
+
+.titan-hero-image:hover {
+  transform: scale(1.045) rotateY(4deg);
+  filter: drop-shadow(0 12px 25px rgba(0, 180, 255, .35));
+}
+
+/* درخشش دکمه‌ها */
+button, .btn, .primary-button {
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+button:hover, .btn:hover, .primary-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 18px rgba(0, 190, 255, .5);
+}
+  </style>
+</head>
+<body>
+ 
+<header>
+  <div class="container nav">
+    <a class="brand" href="../index.html">OHAD <span>MEDICAL</span></a>
+    <a class="back"
+       href="../index.html"
+       data-fa="← بازگشت به کاتالوگ"
+       data-en="← Back to Catalog">← بازگشت به کاتالوگ</a>
+  </div>
+</header>
+
+  <main class="container">
+    <div class="breadcrumb">
+      <a href="../index.html">صفحه اصلی</a> / محصولات / آویز تیتان
+    </div>
+<div class="hero">
+  <div class="visual">
+   <img
+  id="product-hero-image"
+  src="../images/products/titan/_MG_2590 copyy.png"
+  alt="تصویر محصول"
+  class="titan-hero-image"
+>
+<div>
+  <div class="eyebrow" data-fa="تجهیزات بیمارستانی OHAD MEDICAL" data-en="OHAD MEDICAL Hospital Equipment">تجهیزات بیمارستانی OHAD MEDICAL</div>
+  <h1 data-fa="آویز سقفی تیتان" data-en="TITAN Ceiling Pendant">آویز سقفی تیتان</h1>
+  <div class="english">TITAN Ceiling Pendant</div>
+  <p class="intro"
+     data-fa="آویز تیتان برای سازمان‌دهی تجهیزات و دسترسی به زیرساخت‌های برق و گازهای طبی طراحی شده است. پیکربندی نهایی می‌تواند بر اساس نیاز پروژه و تجهیزات مورد استفاده انتخاب شود."
+     data-en="The Titan pendant is designed to organize equipment and provide access to electrical and medical gas services. The final configuration can be selected according to project requirements and intended equipment.">
+    آویز تیتان برای سازمان‌دهی تجهیزات و دسترسی به زیرساخت‌های برق و گازهای طبی طراحی شده است.
+    پیکربندی نهایی می‌تواند بر اساس نیاز پروژه و تجهیزات مورد استفاده انتخاب شود.
+  </p>
+  <div class="chips">
+    <div class="chip" data-fa="ظرفیت بار اعلام‌شده: تا ۲۲۰ کیلوگرم" data-en="Stated load capacity: up to 220 kg">ظرفیت بار اعلام‌شده: تا ۲۲۰ کیلوگرم</div>
+    <div class="chip" data-fa="دو بازوی افقی" data-en="Two horizontal arms">دو بازوی افقی</div>
+    <div class="chip" data-fa="حرکت عمودی تا ۴۰ سانتی‌متر" data-en="Vertical movement up to 40 cm">حرکت عمودی تا ۴۰ سانتی‌متر</div>
+  </div>
+  <div class="actions">
+    <a class="btn primary" href="#specs" data-fa="مشاهده مشخصات فنی" data-en="View Technical Specifications">مشاهده مشخصات فنی</a>
+    <a class="btn secondary" href="#contact" data-fa="درخواست مشاوره" data-en="Request a Consultation">درخواست مشاوره</a>
+  </div>
+</div>
+
+    </div>
+
+<section>
+  <h2 class="section-title"
+      data-fa="ویژگی‌های محصول"
+      data-en="Product Features">ویژگی‌های محصول</h2>
+
+  <p class="section-sub"
+     data-fa="امکانات و پیکربندی آویز تیتان بر اساس مشخصات ارائه‌شده."
+     data-en="Titan pendant features and configuration based on the provided specifications.">امکانات و پیکربندی آویز تیتان بر اساس مشخصات ارائه‌شده.</p>
+
+  <div class="features">
+    <article class="feature">
+      <div class="icon">↻</div>
+      <h3 data-fa="حرکت و چرخش بازوها"
+          data-en="Arm Movement and Rotation">حرکت و چرخش بازوها</h3>
+      <p data-fa="دو بازوی افقی با قابلیت چرخش ۳۳۰ درجه و حرکت عمودی تا ۴۰ سانتی‌متر."
+         data-en="Two horizontal arms with 330-degree rotation and vertical movement up to 40 cm.">دو بازوی افقی با قابلیت چرخش ۳۳۰ درجه و حرکت عمودی تا ۴۰ سانتی‌متر.</p>
+    </article>
+
+    <article class="feature">
+      <div class="icon">⚙</div>
+      <h3 data-fa="پیکربندی تجهیزات"
+          data-en="Equipment Configuration">پیکربندی تجهیزات</h3>
+      <p data-fa="امکان نصب تجهیزات برقی، خروجی گازهای طبی، میز و کشو با تعداد قابل تنظیم."
+         data-en="Supports electrical equipment, medical gas outlets, shelves, and drawers in configurable quantities.">امکان نصب تجهیزات برقی، خروجی گازهای طبی، میز و کشو با تعداد قابل تنظیم.</p>
+    </article>
+
+    <article class="feature">
+      <div class="icon">▤</div>
+      <h3 data-fa="ساختار و کنترل"
+          data-en="Structure and Control">ساختار و کنترل</h3>
+      <p data-fa="بدنه آلومینیومی با رنگ کوره‌ای الکترواستاتیک، دسته و کلید ترمز برای هر بازو."
+         data-en="Aluminum body with electrostatic powder coating, plus a handle and brake switch for each arm.">بدنه آلومینیومی با رنگ کوره‌ای الکترواستاتیک، دسته و کلید ترمز برای هر بازو.</p>
+    </article>
+  </div>
+</section>
+
+
+<section id="details">
+  <h2 class="section-title" data-fa="معرفی تخصصی آویز تیتان" data-en="Titan Pendant Overview">معرفی تخصصی آویز تیتان</h2>
+  <p class="section-sub" data-fa="راهکاری برای سامان‌دهی تجهیزات پزشکی، اتصالات گازهای طبی و تجهیزات الکتریکی در محیط‌های درمانی." data-en="A solution for organizing medical equipment, medical gas connections, and electrical equipment in clinical environments.">
+    راهکاری برای سامان‌دهی تجهیزات پزشکی، اتصالات گازهای طبی و تجهیزات الکتریکی در محیط‌های درمانی.
+  </p>
+
+  <div class="feature">
+    <h3 data-fa="طراحی برای مدیریت فضای درمان" data-en="Designed for Clinical Space Management">طراحی برای مدیریت فضای درمان</h3>
+    <p data-fa="آویز سقفی تیتان از محصولات تخصصی OHAD MEDICAL است که با هدف سامان‌دهی تجهیزات و فراهم‌کردن دسترسی مناسب به اتصالات و متعلقات پزشکی طراحی شده است. ساختار بازویی آن امکان تنظیم موقعیت مجموعه را در محدوده حرکتی طراحی‌شده فراهم می‌کند و به مدیریت بهتر فضای اطراف محل درمان کمک می‌کند."
+       data-en="The Titan ceiling pendant is a specialized OHAD MEDICAL product designed to organize equipment and provide convenient access to medical connections and accessories. Its arm structure allows positioning within its designed range of motion, helping manage space around the treatment area.">
+      آویز سقفی تیتان از محصولات تخصصی OHAD MEDICAL است که با هدف سامان‌دهی تجهیزات و فراهم‌کردن دسترسی مناسب به اتصالات و متعلقات پزشکی طراحی شده است. ساختار بازویی آن امکان تنظیم موقعیت مجموعه را در محدوده حرکتی طراحی‌شده فراهم می‌کند و به مدیریت بهتر فضای اطراف محل درمان کمک می‌کند.
+    </p>
+
+    <h3 data-fa="بازوها و محدوده حرکتی" data-en="Arms and Range of Motion">بازوها و محدوده حرکتی</h3>
+    <p data-fa="این محصول دارای دو بازوی افقی با قابلیت چرخش اعلام‌شده تا ۳۳۰ درجه و حرکت عمودی تا ۴۰ سانتی‌متر است. این قابلیت‌ها امکان تنظیم موقعیت آویز متناسب با آرایش فضای کاری و دسترسی موردنیاز به تجهیزات را فراهم می‌کنند."
+       data-en="This product has two horizontal arms with a stated rotation of up to 330 degrees and vertical movement of up to 40 cm. These features allow the pendant to be positioned according to the workspace layout and equipment access requirements.">
+      این محصول دارای دو بازوی افقی با قابلیت چرخش اعلام‌شده تا ۳۳۰ درجه و حرکت عمودی تا ۴۰ سانتی‌متر است. این قابلیت‌ها امکان تنظیم موقعیت آویز متناسب با آرایش فضای کاری و دسترسی موردنیاز به تجهیزات را فراهم می‌کنند.
+    </p>
+
+    <h3 data-fa="ظرفیت بار و تجهیزات جانبی" data-en="Load Capacity and Accessories">ظرفیت بار و تجهیزات جانبی</h3>
+    <p data-fa="ظرفیت بار اعلام‌شده برای آویز تیتان تا ۲۲۰ کیلوگرم است. امکان نصب تجهیزات الکتریکی، خروجی‌های گازهای طبی، میز و کشو در پیکربندی محصول در نظر گرفته شده است. تعداد و آرایش متعلقات باید با توجه به نیاز پروژه و مشخصات فنی تأییدشده انتخاب شود."
+       data-en="The stated load capacity of the Titan pendant is up to 220 kg. The configuration can accommodate electrical equipment, medical gas outlets, shelves, and drawers. Accessories and their arrangement should be selected according to project needs and approved technical specifications.">
+      ظرفیت بار اعلام‌شده برای آویز تیتان تا ۲۲۰ کیلوگرم است. امکان نصب تجهیزات الکتریکی، خروجی‌های گازهای طبی، میز و کشو در پیکربندی محصول در نظر گرفته شده است. تعداد و آرایش متعلقات باید با توجه به نیاز پروژه و مشخصات فنی تأییدشده انتخاب شود.
+    </p>
+
+    <h3 data-fa="ترمز و کنترل حرکت" data-en="Braking and Motion Control">ترمز و کنترل حرکت</h3>
+    <p data-fa="برای هر بازو دسته و کلید ترمز در نظر گرفته شده است تا کنترل حرکت و موقعیت‌دهی مجموعه مطابق طراحی محصول انجام شود. جزئیات عملکرد باید با مستندات فنی نسخه نهایی محصول تطبیق داده شود."
+       data-en="Each arm is equipped with a handle and brake switch to control movement and positioning according to the product design. Operating details should be verified against the final product's technical documentation.">
+      برای هر بازو دسته و کلید ترمز در نظر گرفته شده است تا کنترل حرکت و موقعیت‌دهی مجموعه مطابق طراحی محصول انجام شود. جزئیات عملکرد باید با مستندات فنی نسخه نهایی محصول تطبیق داده شود.
+    </p>
+
+    <h3 data-fa="بدنه و پوشش سطح" data-en="Body and Surface Finish">بدنه و پوشش سطح</h3>
+    <p data-fa="بدنه آویز از آلومینیوم ساخته شده و دارای پوشش رنگ کوره‌ای الکترواستاتیک است. این ساختار در کنار امکان انتخاب تجهیزات جانبی، به پیکربندی محصول متناسب با نیازهای پروژه کمک می‌کند."
+       data-en="The pendant body is made of aluminum with an electrostatic powder-coated finish. Together with the available accessories, this structure supports configurations tailored to project requirements.">
+      بدنه آویز از آلومینیوم ساخته شده و دارای پوشش رنگ کوره‌ای الکترواستاتیک است. این ساختار در کنار امکان انتخاب تجهیزات جانبی، به پیکربندی محصول متناسب با نیازهای پروژه کمک می‌کند.
+    </p>
+
+    <h3 data-fa="پیکربندی ویژه دستگاه بیهوشی" data-en="Anesthesia Equipment Configuration">پیکربندی ویژه دستگاه بیهوشی</h3>
+    <p data-fa="امکان استفاده از بازوی موتوردار با پایه مخصوص دستگاه بیهوشی نیز در مشخصات اعلام‌شده محصول آمده است. جزئیات سازگاری و نحوه نصب باید هنگام انتخاب پیکربندی بررسی شود."
+       data-en="The stated product specifications also include an option for a motorized arm with a dedicated anesthesia machine mount. Compatibility and installation details should be checked when selecting the configuration.">
+      امکان استفاده از بازوی موتوردار با پایه مخصوص دستگاه بیهوشی نیز در مشخصات اعلام‌شده محصول آمده است. جزئیات سازگاری و نحوه نصب باید هنگام انتخاب پیکربندی بررسی شود.
+    </p>
+
+    <h3 data-fa="انتخاب متناسب با پروژه" data-en="Selecting the Right Configuration">انتخاب متناسب با پروژه</h3>
+    <p data-fa="برای انتخاب آویز مناسب، نوع فضای درمانی، تجهیزات موردنیاز، تعداد خروجی‌ها، آرایش میز و کشو و شرایط نصب باید بررسی شود. تیم OHAD MEDICAL می‌تواند بر اساس اطلاعات پروژه، گزینه‌های قابل ارائه را مشخص کند."
+       data-en="Selecting a suitable pendant requires reviewing the clinical environment, required equipment, number of outlets, shelf and drawer arrangement, and installation conditions. The OHAD MEDICAL team can identify available options based on project information.">
+      برای انتخاب آویز مناسب، نوع فضای درمانی، تجهیزات موردنیاز، تعداد خروجی‌ها، آرایش میز و کشو و شرایط نصب باید بررسی شود. تیم OHAD MEDICAL می‌تواند بر اساس اطلاعات پروژه، گزینه‌های قابل ارائه را مشخص کند.
+    </p>
+  </div>
+</section>
+
+<section id="specs">
+  <h2 class="section-title" data-fa="مشخصات فنی" data-en="Technical Specifications">مشخصات فنی</h2>
+  <p class="section-sub" data-fa="مقادیر زیر بر اساس اطلاعات اولیه محصول درج شده‌اند." data-en="The following values are based on the preliminary product information.">مقادیر زیر بر اساس اطلاعات اولیه محصول درج شده‌اند.</p>
+  <div class="specs">
+    <div class="spec-row"><span data-fa="حداکثر ظرفیت بار اعلام‌شده" data-en="Stated Maximum Load Capacity">حداکثر ظرفیت بار اعلام‌شده</span><strong data-fa="تا ۲۲۰ کیلوگرم" data-en="Up to 220 kg">تا ۲۲۰ کیلوگرم</strong></div>
+    <div class="spec-row"><span data-fa="ساختار بازو" data-en="Arm Structure">ساختار بازو</span><strong data-fa="دو بازوی افقی" data-en="Two horizontal arms">دو بازوی افقی</strong></div>
+    <div class="spec-row"><span data-fa="زاویه چرخش بازوها" data-en="Arm Rotation Angle">زاویه چرخش بازوها</span><strong data-fa="۳۳۰ درجه" data-en="330 degrees">۳۳۰ درجه</strong></div>
+    <div class="spec-row"><span data-fa="محدوده حرکت عمودی" data-en="Vertical Travel">محدوده حرکت عمودی</span><strong data-fa="تا ۴۰ سانتی‌متر" data-en="Up to 40 cm">تا ۴۰ سانتی‌متر</strong></div>
+    <div class="spec-row"><span data-fa="جنس بدنه" data-en="Body Material">جنس بدنه</span><strong data-fa="آلومینیوم با رنگ کوره‌ای الکترواستاتیک" data-en="Aluminum with electrostatic powder coating">آلومینیوم با رنگ کوره‌ای الکترواستاتیک</strong></div>
+    <div class="spec-row"><span data-fa="کنترل ترمز" data-en="Brake Control">کنترل ترمز</span><strong data-fa="دسته و کلید ترمز برای هر بازو" data-en="Handle and brake switch for each arm">دسته و کلید ترمز برای هر بازو</strong></div>
+    <div class="spec-row"><span data-fa="تجهیزات قابل نصب" data-en="Supported Equipment">تجهیزات قابل نصب</span><strong data-fa="تجهیزات برقی، خروجی گاز طبی، میز و کشو" data-en="Electrical equipment, medical gas outlets, shelves, and drawers">تجهیزات برقی، خروجی گاز طبی، میز و کشو</strong></div>
+    <div class="spec-row"><span data-fa="پایه نصب دستگاه بیهوشی" data-en="Anesthesia Machine Mount">پایه نصب دستگاه بیهوشی</span><strong data-fa="امکان نصب بازوی موتوردار با پایه مخصوص دستگاه بیهوشی" data-en="Motorized arm option with a dedicated anesthesia machine mount">امکان نصب بازوی موتوردار با پایه مخصوص دستگاه بیهوشی</strong></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="cta">
+    <div>
+      <h2 style="margin:0" data-fa="برای انتخاب پیکربندی مناسب مشاوره بگیرید" data-en="Get Advice on the Right Configuration">برای انتخاب پیکربندی مناسب مشاوره بگیرید</h2>
+      <p data-fa="برای استعلام قیمت و بررسی نیاز پروژه با تیم OHAD MEDICAL در ارتباط باشید." data-en="Contact the OHAD MEDICAL team for pricing inquiries and project requirements.">برای استعلام قیمت و بررسی نیاز پروژه با تیم OHAD MEDICAL در ارتباط باشید.</p>
+    </div>
+    <a class="btn primary" href="mailto:" data-fa="درخواست اطلاعات محصول" data-en="Request Product Information">درخواست اطلاعات محصول</a>
+  </div>
+  <p class="section-sub" style="margin-top:12px" data-fa="اطلاعات تماس واقعی شرکت را بعداً اضافه می‌کنیم؛ این دکمه تا آن زمان به ایمیل مشخصی متصل نیست." data-en="The company's actual contact details will be added later; this button is not yet linked to a specific email address.">
+    اطلاعات تماس واقعی شرکت را بعداً اضافه می‌کنیم؛ این دکمه تا آن زمان به ایمیل مشخصی متصل نیست.
+  </p>
+</section>
+</main>
+
+<footer>
+  <div class="container" data-fa="© OHAD MEDICAL — تجهیزات تخصصی بیمارستانی" data-en="© OHAD MEDICAL — Specialized Hospital Equipment">© OHAD MEDICAL — تجهیزات تخصصی بیمارستانی</div>
+</footer>
+
+  
+<script>
+  const language = localStorage.getItem("ohad-language") || "fa";
+
+  document.documentElement.lang = language;
+  document.documentElement.dir = language === "fa" ? "rtl" : "ltr";
+
+  document.querySelectorAll("[data-fa][data-en]").forEach((el) => {
+    el.textContent = language === "fa"
+      ? el.dataset.fa
+      : el.dataset.en;
+  });
+</script>
+<script>
+/* ذرات نورانی پس‌زمینه صفحات محصول */
+const canvas = document.createElement("canvas");
+canvas.style.cssText = `
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: .5;
+`;
+document.body.prepend(canvas);
+
+const ctx = canvas.getContext("2d");
+let particles = [];
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  particles = Array.from({ length: 40 }, () => ({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    r: Math.random() * 2 + 1,
+    speed: Math.random() * .4 + .15
+  }));
+}
+
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  particles.forEach(p => {
+    p.y -= p.speed;
+
+    if (p.y < 0) {
+      p.y = canvas.height;
+      p.x = Math.random() * canvas.width;
+    }
+
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    ctx.fillStyle = "rgba(0,190,255,.7)";
+    ctx.shadowBlur = 12;
+    ctx.shadowColor = "#00beff";
+    ctx.fill();
+  });
+
+  requestAnimationFrame(animate);
+}
+
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
+animate();
+</script>
+</body>
+</html>

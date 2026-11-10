@@ -1,0 +1,1979 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1b2b">
+  <meta name="description" content="مشخصات محصولات و تجهیزات پزشکی و بیمارستانی OHAD MEDICAL">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <title>جزئیات محصول | OHAD MEDICAL</title>
+
+  <style>
+    :root {
+      --navy: #081b32;
+      --navy2: #102b49;
+      --teal: #27c8bc;
+      --bg: #f5f8fb;
+      --surface: #fff;
+      --text: #152a40;
+      --muted: #6b7d90;
+      --border: #cbd6e0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+   body {
+  margin: 0;
+  font-family: 'Vazirmatn', sans-serif;
+  font-size: 15px;
+  color: var(--text);
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(rgba(15, 25, 35, 0.78), rgba(15, 25, 35, 0.78)),
+    url("../images/medical-stats-bg.jpg.avif");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  line-height: 1.9;
+  -webkit-font-smoothing: antialiased;
+}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .topbar {
+      min-height: 76px;
+      padding: 16px max(5%, calc((100% - 1120px) / 2));
+      background: var(--hero);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: .5px;
+      direction: ltr;
+      white-space: nowrap;
+    }
+
+    .back-link {
+      padding: 8px 15px;
+      border: 1px solid #52677a;
+      border-radius: 10px;
+      color: #e7f0f5;
+      font-size: 13px;
+      transition: background .2s;
+    }
+
+    .back-link:hover {
+      background: #ffffff12;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 42px 5% 55px;
+      background: linear-gradient(135deg, var(--hero), var(--hero-light));
+      color: white;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      left: -120px;
+      top: -160px;
+      border: 1px solid #ffffff12;
+      border-radius: 50%;
+      box-shadow: 0 0 0 35px #ffffff08, 0 0 0 70px #ffffff05;
+      pointer-events: none;
+    }
+
+    .hero-inner,
+    .content {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .breadcrumb {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 26px;
+      color: #b8cbd6;
+      font-size: 12px;
+    }
+
+    .breadcrumb a:hover {
+      color: white;
+    }
+
+    .breadcrumb-separator {
+      color: var(--teal);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(300px, .9fr);
+      align-items: center;
+      gap: 38px;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+      color: var(--teal);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.6px;
+      direction: ltr;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 25px;
+      height: 2px;
+      background: var(--teal);
+    }
+
+    h1 {
+      margin: 8px 0;
+      font-size: clamp(30px, 4vw, 43px);
+      font-weight: 800;
+      line-height: 1.55;
+      letter-spacing: -.7px;
+    }
+
+    .english {
+      margin-top: 3px;
+      color: #b8d2dc;
+      direction: ltr;
+      text-align: right;
+      font-size: 17px;
+      font-weight: 500;
+    }
+
+    .category {
+      display: inline-block;
+      margin-top: 17px;
+      padding: 5px 14px;
+      background: #ffffff12;
+      border: 1px solid #ffffff30;
+      border-radius: 30px;
+      color: #e4f4f5;
+      font-size: 12px;
+    }
+
+    .hero-description {
+      margin: 19px 0 0;
+      max-width: 640px;
+      color: #e1edf2;
+      font-size: 15px;
+      line-height: 2.2;
+    }
+
+    /* کادر آماده مدل سه‌بعدی */
+
+    .viewer-card {
+      min-width: 0;
+      padding: 12px;
+      background: #ffffff09;
+      border: 1px solid #ffffff25;
+      border-radius: 19px;
+      box-shadow: 0 18px 45px #00000016;
+    }
+
+    .viewer-topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      padding: 5px 7px 12px;
+    }
+
+    .viewer-title {
+      color: #f0f7fa;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .viewer-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #a6e5df;
+      font-size: 10px;
+      white-space: nowrap;
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--teal);
+    }
+.viewer-stage {
+  position: relative;
+  display: flex;
+  min-height: 290px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid #ffffff15;
+  border-radius: 13px;
+  background:
+    linear-gradient(rgba(10, 25, 35, 0.55), rgba(10, 25, 35, 0.55)),
+    url("../images/medical-stats-bg.jpg.avif") center / cover no-repeat;
+}
+
+    .viewer-stage #product-hero-image {
+      width: 100%;
+      height: 290px;
+      max-width: 100%;
+      object-fit: contain;
+      display: block;
+      margin: auto;
+    }
+
+    .viewer-stage::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .24;
+      background-image:
+        linear-gradient(#a3d6dc18 1px, transparent 1px),
+        linear-gradient(90deg, #a3d6dc18 1px, transparent 1px);
+      background-size: 28px 28px;
+      mask-image: linear-gradient(to bottom, black, transparent 95%);
+      pointer-events: none;
+    }
+
+    .viewer-placeholder {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      width: 100%;
+      min-height: 290px;
+      padding: 25px 18px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .viewer-icon {
+      display: grid;
+      place-items: center;
+      width: 76px;
+      height: 76px;
+      margin-bottom: 17px;
+      border: 1px solid #72d8d150;
+      border-radius: 20px;
+      background: #72d8d112;
+      color: var(--teal);
+    }
+
+    .viewer-icon svg {
+      width: 39px;
+      height: 39px;
+    }
+
+    .viewer-placeholder h2 {
+      margin: 0;
+      color: white;
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .viewer-placeholder p {
+      max-width: 290px;
+      margin: 8px 0 0;
+      color: #b8cbd6;
+      font-size: 12px;
+      line-height: 2;
+    }
+
+    .viewer-hint {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 17px;
+      padding: 6px 11px;
+      border: 1px solid #ffffff20;
+      border-radius: 8px;
+      color: #d3e5eb;
+      font-size: 11px;
+    }
+
+    .viewer-footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 6px 3px;
+      color: #b8cbd6;
+      font-size: 11px;
+    }
+
+    .viewer-footer span:last-child {
+      direction: ltr;
+    }
+
+    /* محتوای صفحه */
+
+    .content {
+      padding: 43px 5% 68px;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 21px;
+    }
+
+    .section-mark {
+      width: 4px;
+      height: 27px;
+      flex-shrink: 0;
+      border-radius: 5px;
+      background: var(--primary);
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -.3px;
+    }
+
+    .section-subtitle {
+      margin: -10px 0 20px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .feature-card {
+      min-height: 140px;
+      padding: 21px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--primary);
+      border-radius: 14px;
+      box-shadow: 0 4px 17px #0b1b2b06;
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+    }
+
+    .feature-number {
+      margin-bottom: 9px;
+      color: var(--primary);
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .feature-card p {
+      margin: 0;
+      color: #263d50;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 2.05;
+    }
+
+    .spec-section {
+      margin-top: 43px;
+    }
+
+    .spec-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .spec-row {
+      display: grid;
+      grid-template-columns: minmax(110px, .65fr) minmax(0, 2fr);
+      align-items: center;
+      gap: 20px;
+      padding: 14px 18px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 11px;
+    }
+
+    .spec-row span {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .spec-row strong {
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 600;
+      text-align: right;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-card {
+      margin-top: 40px;
+      padding: 28px;
+      background: #e8f5f5;
+      border: 1px solid #c7e7e7;
+      border-radius: 16px;
+    }
+
+    .contact-card h2 {
+      margin: 0 0 8px;
+      font-size: 21px;
+      font-weight: 800;
+    }
+
+    .contact-card p {
+      max-width: 700px;
+      margin: 0 0 20px;
+      color: #526c7a;
+      font-size: 14px;
+      line-height: 2;
+    }
+
+    .primary-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 45px;
+      padding: 10px 20px;
+      background: var(--primary);
+      color: white;
+      border: 1px solid var(--primary);
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 700;
+      transition: background .2s, transform .2s;
+    }
+
+    .primary-button:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+    }
+
+    .notice {
+      margin-top: 25px;
+      padding: 18px 20px;
+      color: var(--muted);
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      font-size: 14px;
+    }
+
+    footer {
+      padding: 25px 5%;
+      background: var(--hero);
+      color: #c9d7df;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    footer strong {
+      color: white;
+      font-weight: 800;
+    }
+
+    @media (max-width: 850px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .viewer-card {
+        max-width: 600px;
+        width: 100%;
+      }
+
+      .feature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 560px) {
+      .topbar {
+        padding: 14px 5%;
+      }
+
+      .brand {
+        font-size: 18px;
+      }
+
+      .back-link {
+        padding: 7px 10px;
+        font-size: 12px;
+      }
+
+      .hero {
+        padding: 29px 5% 37px;
+      }
+
+      .breadcrumb {
+        margin-bottom: 20px;
+        font-size: 11px;
+      }
+
+      h1 {
+        font-size: clamp(27px, 7.5vw, 34px);
+      }
+
+      .english {
+        font-size: 15px;
+      }
+
+      .hero-description {
+        font-size: 14px;
+      }
+
+      .viewer-stage,
+      .viewer-placeholder {
+        min-height: 245px;
+      }
+
+      .content {
+        padding: 29px 5% 43px;
+      }
+
+      .section-title {
+        font-size: 19px;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .feature-card {
+        min-height: 0;
+        padding: 18px;
+      }
+
+      .spec-section {
+        margin-top: 34px;
+      }
+
+      .spec-row {
+        grid-template-columns: 1fr;
+        gap: 3px;
+        padding: 13px 15px;
+      }
+
+      .contact-card {
+        margin-top: 30px;
+        padding: 21px 18px;
+      }
+
+      .contact-card h2 {
+        font-size: 19px;
+      }
+
+      .primary-button {
+        width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+
+    /* هماهنگ‌سازی ظاهر محصولات با صفحه تیتان */
+
+    body {
+      font-family: Vazirmatn, sans-serif;
+      font-size: 15px;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.9;
+    }
+
+    .topbar {
+      min-height: 78px;
+      padding: 12px 4%;
+      background: var(--navy);
+      border-bottom: 3px solid var(--teal);
+    }
+
+    .brand {
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .back-link {
+      border-color: #60758a;
+      border-radius: 10px;
+    }
+
+    .hero {
+      padding: 0;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    .hero::after {
+      display: none;
+    }
+
+    .hero-inner {
+      width: min(1120px, 92%);
+    }
+
+    .breadcrumb {
+      margin-bottom: 0;
+      padding: 22px 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .breadcrumb a {
+      color: #087f7c;
+    }
+
+    .breadcrumb-separator {
+      color: var(--teal);
+    }
+
+    .hero-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      align-items: center;
+      padding: 12px 0 42px;
+    }
+
+    /* رنگ و تایپوگرافی متن معرفی */
+
+    .eyebrow {
+      color: #087f7c;
+      font-size: 13px;
+      letter-spacing: 0;
+      direction: rtl;
+    }
+
+    .eyebrow::before {
+      display: none;
+    }
+
+    h1 {
+      margin: 8px 0 4px;
+      color: var(--text);
+      font-size: clamp(30px, 4vw, 46px);
+      font-weight: 800;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+
+    .english {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .category {
+      margin-top: 12px;
+      padding: 5px 12px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: var(--text);
+    }
+
+    .hero-description {
+      margin: 18px 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    /* کادر رندر سه‌بعدی با زمینه روشن */
+
+    .viewer-card {
+      min-width: 0;
+      padding: 28px;
+      background:
+        radial-gradient(ellipse at 50% 42%,
+          rgba(39, 200, 188, .16),
+          transparent 56%),
+        linear-gradient(145deg, #fff, #eaf1f6);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: 0 18px 48px rgba(8, 27, 50, .07);
+    }
+
+    .viewer-topbar {
+      padding: 0 0 14px;
+    }
+
+    .viewer-title {
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    .viewer-status {
+      color: #087f7c;
+    }
+
+    .status-dot {
+      background: var(--teal);
+    }
+
+    .viewer-stage {
+      min-height: 290px;
+      background:
+        radial-gradient(ellipse at 50% 42%,
+          rgba(39, 200, 188, .12),
+          transparent 60%),
+        linear-gradient(145deg, #fff, #eaf1f6);
+      border: 1px solid var(--border);
+      border-radius: 13px;
+    }
+
+    .viewer-stage::before {
+      display: none;
+    }
+
+    .viewer-placeholder {
+      min-height: 290px;
+    }
+
+    .viewer-icon {
+      background: #e4f8f6;
+      border-color: #b6e9e4;
+      color: #087f7c;
+    }
+
+    .viewer-placeholder h2 {
+      color: var(--text);
+      font-size: 18px;
+    }
+
+    .viewer-placeholder p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .viewer-hint {
+      border-color: var(--border);
+      color: var(--muted);
+    }
+
+    .viewer-footer {
+      color: var(--muted);
+    }
+
+    /* بخش‌های پایین صفحه */
+
+    .content {
+      padding: 32px 0 60px;
+    }
+
+    .section-heading {
+      gap: 0;
+      margin-bottom: 6px;
+    }
+
+    .section-mark {
+      display: none;
+    }
+
+    .section-title {
+      font-size: 25px;
+      font-weight: 800;
+    }
+
+    .section-subtitle {
+      margin: 0 0 22px;
+      color: var(--muted);
+    }
+
+    .feature-grid {
+      gap: 15px;
+    }
+
+    .feature-card {
+      min-height: 140px;
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-top: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: none;
+    }
+
+    .feature-number {
+      color: #087f7c;
+      font-size: 13px;
+    }
+
+    .feature-card p {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .feature-card:hover {
+      transform: none;
+      box-shadow: var(--shadow);
+    }
+
+    .spec-row {
+      padding: 13px 18px;
+      border-radius: 0;
+    }
+
+    .spec-list {
+      gap: 0;
+      overflow: hidden;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+    }
+
+    .spec-row {
+      border: 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .spec-row:last-child {
+      border-bottom: 0;
+    }
+
+    .contact-card {
+      background: var(--navy);
+      border: 0;
+      border-radius: 22px;
+      color: white;
+    }
+
+    .contact-card h2 {
+      font-size: 22px;
+    }
+
+    .contact-card p {
+      color: #c4d2df;
+    }
+
+    .primary-button {
+      background: var(--teal);
+      border-color: var(--teal);
+      color: var(--navy);
+    }
+
+    .primary-button:hover {
+      background: #43d6ca;
+    }
+
+    .notice {
+      border-radius: 12px;
+    }
+
+    footer {
+      margin-top: 40px;
+      background: #061426;
+    }
+
+    /* موبایل */
+
+    @media (max-width: 850px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+
+      .viewer-card {
+        width: 100%;
+        max-width: none;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .hero {
+        padding: 0;
+      }
+
+      .hero-inner {
+        width: 92%;
+      }
+
+      .viewer-card {
+        padding: 18px;
+        border-radius: 20px;
+      }
+
+      .viewer-stage,
+      .viewer-placeholder {
+        min-height: 245px;
+      }
+
+      .content {
+        width: 92%;
+        padding: 29px 0 43px;
+      }
+
+      .section-title {
+        font-size: 21px;
+      }
+
+      .contact-card {
+        padding: 21px 18px;
+      }
+    }
+
+    .kranos-slider {
+      position: relative;
+      width: 100%;
+      height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .kranos-slider img {
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      display: block;
+    }
+/* اندازه قاب و تناسب تصویر محصولات */
+.viewer-card {
+  width: 100%;
+  max-width: 460px;
+  min-height: 0;
+  padding: 20px;
+  margin: auto;
+  display: block;
+  background: linear-gradient(145deg, #ffffff, #e8f1f7);
+  border: 1px solid #d5e1eb;
+  border-radius: 24px;
+}
+.viewer-stage {
+  width: 100%;
+  height: 320px;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.viewer-stage #product-hero-image {
+  width: 100%;
+  height: 300px;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+/* قاب تصویر محصول، هماهنگ با صفحه تیتان */
+.product-hero .visual {
+  min-height: 390px;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background:
+    radial-gradient(ellipse at 50% 42%, rgba(39, 200, 188, .16), transparent 56%),
+    linear-gradient(145deg, #fff, #eaf1f6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  box-shadow: 0 18px 48px rgba(8, 27, 50, .07);
+  overflow: hidden;
+}
+
+.product-hero .visual #product-hero-image {
+  width: 100%;
+  height: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+}
+
+@media (max-width: 720px) {
+  .product-hero .visual {
+    min-height: 290px;
+  }
+}
+/* افکت تصویر محصولات */
+.viewer-stage #product-hero-image {
+  transition: transform .5s ease, filter .5s ease;
+  filter: drop-shadow(0 8px 18px rgba(0, 160, 255, .12));
+}
+
+.viewer-stage #product-hero-image:hover {
+  transform: scale(1.045) rotateY(4deg);
+  filter: drop-shadow(0 12px 25px rgba(0, 180, 255, .35));
+}
+
+/* درخشش دکمه‌ها */
+button, .btn, .primary-button {
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+button:hover, .btn:hover, .primary-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 18px rgba(0, 190, 255, .5);
+}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../index.html">OHAD MEDICAL</a>
+
+    <button id="languageBtn" class="back-link" type="button">EN</button>
+
+    <a id="backLink" class="back-link" href="../index.html">
+      ← بازگشت به محصولات
+    </a>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+
+      <nav class="breadcrumb" id="breadcrumb" aria-label="مسیر صفحه">
+        <a id="homeLink" href="../index.html">صفحه اصلی</a>
+        <span class="breadcrumb-separator">/</span>
+        <a id="productsLink" href="../index.html#products">محصولات</a>
+        <span class="breadcrumb-separator">/</span>
+        <span id="breadcrumbProduct">جزئیات محصول</span>
+      </nav>
+
+      <div class="hero-grid">
+
+        <div class="hero-copy">
+          <div class="eyebrow" id="eyebrow">اطلاعات محصول</div>
+
+          <h1 id="productName">در حال بارگذاری...</h1>
+
+          <div class="english" id="productEnglish"></div>
+
+          <p class="hero-description" id="productDescription"></p>
+
+          <span class="category" id="productCategory"></span>
+
+          <div style="margin-top: 24px">
+            <a
+              id="heroContactButton"
+              class="primary-button"
+              href="../index.html#contact"
+            >
+              استعلام و دریافت اطلاعات بیشتر
+            </a>
+          </div>
+        </div>
+
+        <div class="viewer-card">
+          <div class="viewer-stage">
+            <img
+              id="product-hero-image"
+              src=""
+              alt="تصویر محصول"
+            >
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <main class="content">
+
+    <section>
+      <div class="section-heading">
+        <span class="section-mark"></span>
+        <h2 class="section-title" id="featuresTitle">
+          ویژگی‌های محصول
+        </h2>
+      </div>
+
+      <p class="section-subtitle" id="featuresSubtitle">
+        قابلیت‌ها و ویژگی‌های اصلی این محصول
+      </p>
+
+      <div class="feature-grid" id="features"></div>
+    </section>
+
+    <section class="spec-section">
+      <div class="section-heading">
+        <span class="section-mark"></span>
+        <h2 class="section-title" id="specificationsTitle">
+          مشخصات محصول
+        </h2>
+      </div>
+
+      <p class="section-subtitle" id="specificationsSubtitle">
+        اطلاعات فنی ثبت‌شده برای محصول انتخابی
+      </p>
+
+      <div class="spec-list" id="specifications"></div>
+    </section>
+
+    <section class="contact-card">
+      <h2 id="contactTitle">
+        استعلام و دریافت اطلاعات بیشتر
+      </h2>
+
+      <p id="contactDescription">
+        برای دریافت قیمت، کاتالوگ و اطلاعات فنی تکمیلی،
+        با واحد فروش OHAD MEDICAL در ارتباط باشید.
+      </p>
+
+      <a
+        id="contactButton"
+        class="primary-button"
+        href="../index.html#contact"
+      >
+        ارتباط با واحد فروش
+      </a>
+    </section>
+
+    <div class="notice" id="notice" hidden></div>
+
+  </main>
+
+  <footer>
+    <strong>OHAD MEDICAL</strong>
+    <span id="footerText"> — تجهیزات تخصصی بیمارستانی</span>
+  </footer>
+  <script>
+    const productData = {
+      titan: {
+        name: "آویز تیتان",
+        english: "Titan Pendant",
+        category: "آویزهای سقفی",
+        categoryEn: "Ceiling Pendants",
+        description: "آویز سقفی تجهیزات پزشکی با ظرفیت بار اعلام‌شده تا ۲۲۰ کیلوگرم، بازوهای افقی چرخان و قابلیت حرکت عمودی.",
+        descriptionEn: "A medical ceiling pendant with a stated load capacity of up to 220 kg, rotating horizontal arms, and vertical movement.",
+        image: "../images/products/titan/_MG_2590 copyy.png",
+        features: [
+          "ظرفیت بار اعلام‌شده تا ۲۲۰ کیلوگرم",
+          "چرخش بازوهای افقی تا ۳۳۰ درجه",
+          "حرکت عمودی تا ۴۰ سانتی‌متر",
+          "قابلیت نصب تجهیزات الکتریکی و خروجی‌های گاز پزشکی",
+          "امکان نصب میز و کشو برای تجهیزات",
+          "قابلیت نصب تجهیزات بیهوشی با پایه مناسب"
+        ],
+        featuresEn: [
+          "Stated load capacity of up to 220 kg",
+          "Horizontal arm rotation up to 330 degrees",
+          "Vertical movement up to 40 cm",
+          "Supports electrical equipment and medical gas outlets",
+          "Optional equipment shelf and drawers",
+          "Supports anesthesia equipment with a suitable mount"
+        ]
+      },
+
+
+      icarus: {
+        name: "آویز ایکاروس",
+        english: "Icarus Pendant",
+        category: "آویزهای سقفی",
+        image: "../images/products/icarus/icarus.png.png",
+        description: "آویز سقفی تجهیزات پزشکی در مدل‌های A1 و A2 برای دسترسی به تجهیزات و خدمات پزشکی.",
+        features: [
+          "ظرفیت بار اعلام‌شده تا ۱۴۰ کیلوگرم",
+          "مدل A1 با یک محور چرخش",
+          "مدل A2 با دو محور چرخش",
+          "ترمز پنوماتیک با کنترل دستی",
+          "قابلیت نصب خروجی گاز پزشکی",
+          "امکان نصب میز و کشو"
+        ]
+      },
+
+     
+
+      kranos: {
+        name: "آویز کرانوس",
+        english: "Kranos Pendant",
+        category: "آویزهای سقفی",
+        image: "../images/products/kranus/_MG_2488 copy copy.png",
+        description: "آویز تجهیزات پزشکی در مدل‌های تک‌بازو و دوبازو.",
+        features: [
+          "ظرفیت بار اعلام‌شده تا ۱۴۰ کیلوگرم",
+          "مدل‌های تک‌بازو و دوبازو",
+          "ترمز پنوماتیک با کنترل دستی",
+          "قابلیت نصب تجهیزات الکتریکی و خروجی گاز پزشکی",
+          "امکان نصب میز و کشو"
+         ],
+        specifications: [
+  { label: "ظرفیت بار", value: "تا ۱۴۰ کیلوگرم" },
+  { label: "مدل", value: "تک‌بازو و دوبازو" },
+  { label: "نوع ترمز", value: "پنوماتیک با کنترل دستی" }
+]
+      },
+
+      l60: {
+        name: "ستون سقفی L60",
+        english: "L60 Ceiling Column",
+        category: "ستون‌های سقفی",
+        description: "ستون سقفی برای نصب تجهیزات پزشکی و نگهدارنده سرم.",
+        features: [
+          "ظرفیت بار اعلام‌شده تا ۳۰ کیلوگرم",
+          "چرخش تا ۳۳۰ درجه",
+          "دارای میز تجهیزات",
+          "قابلیت نصب نگهدارنده سرم"
+        ]
+      },
+
+      "l60-2": {
+        name: "ستون سقفی L60-2",
+        english: "L60-2 Ceiling Column",
+        category: "ستون‌های سقفی",
+        description: "مدل L60-2 برای نصب و دسترسی به تجهیزات پزشکی.",
+        features: [
+          "ظرفیت بار اعلام‌شده تا ۳۰ کیلوگرم",
+          "چرخش تا ۳۳۰ درجه",
+          "دارای میز تجهیزات",
+          "قابلیت نصب نگهدارنده سرم"
+        ]
+      },
+
+      bridge: {
+        name: "آویز بریج",
+        english: "Bridge Pendant",
+        category: "آویزهای سقفی",
+        image: "../images/products/bridge/_MG_2937 copy.png",
+        description: "سامانه سقفی برای دسترسی به تجهیزات و خدمات پزشکی در بخش‌های ICU و CCU.",
+        features: [
+          "قابلیت نصب تجهیزات الکتریکی و خروجی گاز پزشکی",
+          "چرخش ستون و بازو",
+          "امکان جابه‌جایی افقی برای دسترسی بهتر",
+          "طراحی برای بخش‌های مراقبت ویژه"
+        ]
+      },
+
+      parmis: {
+        name: "کنسول پارمیس",
+        english: "Parmis Console",
+        category: "کنسول دیواری",
+        image: "../images/products/parmis/_MG_2661 copy.png",
+        description: "کنسول بیمارستانی با مسیرهای مجزای سیم‌کشی برق و لوله‌کشی گاز پزشکی.",
+        features: [
+          "مسیرهای مجزای برق و گاز پزشکی",
+          "روشنایی LED",
+          "امکان نصب پریز برق و خروجی گاز پزشکی",
+          "پروفیل آلومینیومی آنادایز شده",
+          "پوشش رنگ پودری"
+        ]
+      },
+
+      parmis2: {
+        name: "کنسول پارمیس ۲",
+        english: "Parmis 2 Console",
+        category: "کنسول دیواری",
+        image: "../images/products/parmis 2/de 3.jpg",
+        description: "کنسول بیمارستانی با کانال‌های مجزای خدمات و ریل نصب تجهیزات.",
+        features: [
+          "مسیرهای مجزای برق و گاز پزشکی",
+          "روشنایی LED",
+          "کانال خدمات اختصاصی در پشت کنسول",
+          "ریل نصب تجهیزات",
+          "پوشش رنگ پودری"
+        ]
+      },
+
+      parsi: {
+        name: "کنسول پارسی",
+        english: "Parsi Console",
+        category: "کنسول دیواری",
+        image: "../images/products/parsi/_MG_2781 copy.png",
+        description: "کنسول بیمارستانی برای دسترسی به برق و گازهای پزشکی.",
+        features: [
+          "امکان نصب پریز برق و خروجی گاز پزشکی",
+          "روشنایی LED",
+          "پروفیل آلومینیومی آنادایز شده",
+          "پوشش رنگ پودری"
+        ]
+      },
+
+      paramo: {
+        name: "کنسول پارامو",
+        english: "Paramo Console",
+        category: "کنسول دیواری",
+        image: "../images/products/paramo/DSC_0040 (1) copy.png",
+        description: "کنسول بیمارستانی برای نصب تجهیزات الکتریکی و گاز پزشکی.",
+        features: [
+          "قابلیت نصب تجهیزات الکتریکی و گاز پزشکی",
+          "امکان درج طرح روی سطح میانی",
+          "قابلیت نصب ترانس ایزوله و سیستم LIM",
+          "دو بازو"
+        ]
+      },
+
+      parmino: {
+        name: "کنسول پارمینو",
+        english: "Parmino Console",
+        category: "کنسول دیواری",
+        image: "../images/products/parmino/_MG_2757 copy.png",
+        description: "کنسول تجهیزات پزشکی مناسب برای بخش‌های مراقبت ویژه.",
+        features: [
+          "قابلیت نصب تجهیزات الکتریکی و خروجی گاز پزشکی",
+          "امکان نصب نگهدارنده سرم",
+          "دارای میز تجهیزات و کشو",
+          "مناسب برای استفاده در ICU و CCU"
+        ]
+      },
+
+      outlets: {
+        name: "خروجی‌های گاز طبی",
+        english: "Medical Gas Outlets",
+        category: "خروجی گاز پزشکی",
+        image: "../images/products/OUTLET OT/_MG_3076 copyy.png",
+        description: "خروجی‌های گاز طبی در مدل‌های مختلف؛ نوع گاز و استاندارد باید براساس مدل انتخابی تأیید شود.",
+        features: [
+          "مدل‌های OT737، Star و استیل",
+          "انتخاب نوع گاز متناسب با کاربرد",
+          "تأیید نوع اتصال و استاندارد براساس مدل"
+        ]
+      },
+
+
+      agss: {
+        name: "خروجی AGSS",
+        english: "AGSS Outlet",
+        category: "خروجی گاز پزشکی",
+        image: "../images/products/OUTLET OT/_MG_3076 copyy.png",
+        description: "خروجی سامانه جمع‌آوری گازهای بیهوشی دفع‌شده.",
+        features: [
+          "مناسب برای سامانه تخلیه گازهای بیهوشی",
+          "طراحی برای اتصال به سامانه AGSS"
+        ]
+      },
+
+      isolation: {
+        name: "تابلو ایزوله پزشکی",
+        english: "Medical Isolation Panel",
+        category: "تجهیزات برق پزشکی",
+        image: "../images/products/isole tablo/_MG_3253 - 9301.png",
+        description: "تابلو ایزوله برای اتاق عمل و بخش‌های ویژه بیمارستانی.",
+        features: [
+          "مدل‌های ۳، ۵، ۷٫۵، ۱۰، ۱۵ و ۲۰ کیلوولت‌آمپر",
+          "قابلیت استفاده در محیط‌های درمانی ویژه",
+          "انتخاب پنل متناسب با نیاز پروژه"
+        ]
+      },
+
+      tenor: {
+        name: "ساعت اتاق عمل تنور",
+        english: "Tenor Operating Room Clock",
+        category: "تجهیزات اتاق عمل",
+        image: "../images/products/clock/Catalog fr ohad-10.png",
+        description: "نمایشگر دیجیتال زمان با قابلیت نمایش اطلاعات محیطی.",
+        features: [
+          "نمایشگر دیجیتال بزرگ",
+          "سه تایمر",
+          "امکان نمایش دما و رطوبت",
+          "قابلیت اتصال هشدار دما و رطوبت به سامانه BMS"
+        ]
+      },
+
+      oxygen: {
+        name: "پکیج اکسیژن‌ساز PSA",
+        english: "PSA Oxygen Generation Package",
+        category: "تجهیزات تولید گاز پزشکی",
+        image: "../images/products/control valvebox inteligence/IMG_2550 copy.png",
+        description: "سامانه تولید اکسیژن برای مراکز درمانی؛ ظرفیت نهایی باید براساس مشخصات فنی مدل انتخابی تأیید شود.",
+        features: [
+          "مناسب برای مراکز درمانی",
+          "قابلیت طراحی متناسب با نیاز پروژه",
+          "ظرفیت دقیق باید در برگه مشخصات مدل درج شود"
+        ]
+      },
+
+      air: {
+        name: "پکیج هوای فشرده پزشکی",
+        english: "Medical Compressed Air Package",
+        category: "تجهیزات تولید گاز پزشکی",
+        image: "../images/products/control valvebox/_MG_3189 copy.png",
+        description: "سامانه تأمین هوای فشرده پزشکی برای استفاده در بخش‌های درمانی.",
+        features: [
+          "قابلیت طراحی برای نیازهای بیمارستان",
+          "انتخاب تجهیزات براساس ظرفیت موردنیاز",
+          "تطبیق استانداردها با مشخصات تأییدشده پروژه"
+        ]
+      },
+
+      vacuum: {
+        name: "پکیج وکیوم مرکزی",
+        english: "Central Vacuum Package",
+        category: "تجهیزات تولید گاز پزشکی",
+        image: "../images/products/sucktion/_MG_3367 copy.png",
+        description: "سامانه وکیوم مرکزی برای کاربردهای پزشکی و بیمارستانی.",
+        features: [
+          "کنترل مرکزی سامانه",
+          "امکان استفاده از فیلترهای مناسب کاربرد پزشکی",
+          "قابلیت تنظیم متناسب با نیاز پروژه"
+        ]
+      },
+
+      lights: {
+        name: "چراغ اتاق عمل",
+        english: "Operating Room Light",
+        category: "تجهیزات اتاق عمل",
+        image: "../images/products/light/_MG_3002 copy.png",
+        description: "چراغ مخصوص اتاق عمل با قابلیت تنظیم روشنایی و دمای رنگ.",
+        features: [
+          "دمای رنگ اعلام‌شده ۳۰۰۰ تا ۵۰۰۰ کلوین",
+          "محدوده قطر میدان نور اعلام‌شده ۱۸۰ تا ۲۸۰ میلی‌متر",
+          "کنترل مستقل هر چراغ",
+          "امکان انتخاب دوربین یا نمایشگر در مدل‌های سازگار"
+        ]
+      },
+
+      flow: {
+        name: "فلومتر اکسیژن",
+        english: "Oxygen Flowmeter",
+        category: "تجهیزات گاز پزشکی",
+        image: "../images/products/flometer/_MG_3365 copy.png",
+        description: "فلومتر برای تنظیم و نمایش جریان گاز در کاربردهای پزشکی.",
+        features: [
+          "محدوده نمایش جریان اعلام‌شده ۰ تا ۱۰ لیتر در دقیقه",
+          "محفظه مدرج",
+          "اتصال متناسب با مدل انتخابی"
+        ]
+      }
+    };
+const productTranslations = {
+  icarus: {
+    category: "Ceiling Pendants",
+    description: "A medical ceiling pendant available in A1 and A2 models for convenient access to medical equipment and services.",
+    features: [
+      "Stated load capacity of up to 140 kg",
+      "A1 model with one rotation axis",
+      "A2 model with two rotation axes",
+      "Manually controlled pneumatic brake",
+      "Supports medical gas outlets",
+      "Optional equipment shelf and drawers"
+    ]
+  },
+  kranos: {
+    category: "Ceiling Pendants",
+    description: "A medical equipment pendant available in single-arm and double-arm models.",
+    features: [
+      "Stated load capacity of up to 140 kg",
+      "Single-arm and double-arm models",
+      "Manually controlled pneumatic brake",
+      "Supports electrical equipment and medical gas outlets",
+      "Optional equipment shelf and drawers"
+    ]
+  },
+  l60: {
+    category: "Ceiling Columns",
+    description: "A ceiling column designed for mounting medical equipment and IV holders.",
+    features: [
+      "Stated load capacity of up to 30 kg",
+      "Rotation up to 330 degrees",
+      "Equipped with an equipment shelf",
+      "Supports an IV holder"
+    ]
+  },
+  "l60-2": {
+    category: "Ceiling Columns",
+    description: "The L60-2 model provides mounting and access to medical equipment.",
+    features: [
+      "Stated load capacity of up to 30 kg",
+      "Rotation up to 330 degrees",
+      "Equipped with an equipment shelf",
+      "Supports an IV holder"
+    ]
+  },
+  bridge: {
+    category: "Ceiling Pendants",
+    description: "A ceiling-mounted system providing access to medical equipment and services in ICU and CCU departments.",
+    features: [
+      "Supports electrical equipment and medical gas outlets",
+      "Rotating column and arm",
+      "Horizontal movement for improved access",
+      "Designed for intensive care departments"
+    ]
+  },
+  parmis: {
+    category: "Wall Consoles",
+    description: "A hospital console with separate wiring and medical gas piping channels.",
+    features: [
+      "Separate electrical and medical gas channels",
+      "LED lighting",
+      "Supports power sockets and medical gas outlets",
+      "Anodized aluminum profile",
+      "Powder-coated finish"
+    ]
+  },
+  parmis2: {
+    category: "Wall Consoles",
+    description: "A hospital console with separate service channels and an equipment mounting rail.",
+    features: [
+      "Separate electrical and medical gas channels",
+      "LED lighting",
+      "Dedicated service channel behind the console",
+      "Equipment mounting rail",
+      "Powder-coated finish"
+    ]
+  },
+  parsi: {
+    category: "Wall Consoles",
+    description: "A hospital console providing access to electrical power and medical gases.",
+    features: [
+      "Supports power sockets and medical gas outlets",
+      "LED lighting",
+      "Anodized aluminum profile",
+      "Powder-coated finish"
+    ]
+  },
+  paramo: {
+    category: "Wall Consoles",
+    description: "A hospital console designed for mounting electrical and medical gas equipment.",
+    features: [
+      "Supports electrical and medical gas equipment",
+      "Optional surface design",
+      "Supports an isolation transformer and LIM system",
+      "Two arms"
+    ]
+  },
+  parmino: {
+    category: "Wall Consoles",
+    description: "A medical equipment console suitable for intensive care departments.",
+    features: [
+      "Supports electrical equipment and medical gas outlets",
+      "Supports an IV holder",
+      "Equipped with an equipment shelf and drawer",
+      "Suitable for ICU and CCU departments"
+    ]
+  },
+  outlets: {
+    category: "Medical Gas Outlets",
+    description: "Medical gas outlets available in different models. Gas type and standard must be verified according to the selected model.",
+    features: [
+      "OT737, Star, and stainless steel models",
+      "Gas type selection according to application",
+      "Connection type and standard verification according to model"
+    ]
+  },
+  agss: {
+    category: "Medical Gas Outlets",
+    description: "An outlet for the anesthetic gas scavenging system.",
+    features: [
+      "Suitable for anesthetic gas evacuation systems",
+      "Designed for connection to an AGSS system"
+    ]
+  },
+  isolation: {
+    category: "Medical Electrical Equipment",
+    description: "An isolation panel designed for operating rooms and special hospital departments.",
+    features: [
+      "Available in 3, 5, 7.5, 10, 15, and 20 kVA models",
+      "Suitable for specialized healthcare environments",
+      "Panel selection according to project requirements"
+    ]
+  },
+  tenor: {
+    category: "Operating Room Equipment",
+    description: "A digital time display with environmental information monitoring capabilities.",
+    features: [
+      "Large digital display",
+      "Three timers",
+      "Temperature and humidity display",
+      "Temperature and humidity alerts can connect to a BMS"
+    ]
+  },
+  oxygen: {
+    category: "Medical Gas Generation Equipment",
+    description: "An oxygen generation system for healthcare facilities. Final capacity must be verified according to the selected model specifications.",
+    features: [
+      "Suitable for healthcare facilities",
+      "Can be designed according to project requirements",
+      "Exact capacity must be specified in the model datasheet"
+    ]
+  },
+  air: {
+    category: "Medical Gas Generation Equipment",
+    description: "A medical compressed air supply system for healthcare departments.",
+    features: [
+      "Can be designed for hospital requirements",
+      "Equipment selection according to required capacity",
+      "Standards must match the approved project specifications"
+    ]
+  },
+  vacuum: {
+    category: "Medical Gas Generation Equipment",
+    description: "A central vacuum system for medical and hospital applications.",
+    features: [
+      "Central system control",
+      "Supports filters suitable for medical applications",
+      "Can be configured according to project requirements"
+    ]
+  },
+  lights: {
+    category: "Operating Room Equipment",
+    description: "An operating room light with adjustable illumination and color temperature.",
+    features: [
+      "Stated color temperature range of 3000–5000 K",
+      "Stated light field diameter range of 180–280 mm",
+      "Independent control of each light",
+      "Optional camera or display in compatible models"
+    ]
+  },
+  flow: {
+    category: "Medical Gas Equipment",
+    description: "A flowmeter for regulating and displaying gas flow in medical applications.",
+    features: [
+      "Stated flow display range of 0–10 liters per minute",
+      "Graduated chamber",
+      "Connection according to the selected model"
+    ]
+  }
+};
+  const params = new URLSearchParams(window.location.search);
+const productId = params.get("id");
+const product = productData[productId];
+
+let currentLanguage = localStorage.getItem("ohad-language") || "fa";
+// هماهنگ‌سازی حالت تاریک با صفحه اصلی
+function setProductTheme(theme) {
+  const dark = theme === "dark";
+
+  document.body.classList.toggle("dark", dark);
+
+  const themeBtn = document.getElementById("themeBtn");
+
+  if (themeBtn) {
+    themeBtn.textContent = dark ? "☀" : "☾";
+  }
+
+  localStorage.setItem("ohad-theme", dark ? "dark" : "light");
+}
+
+// اعمال تم ذخیره‌شده هنگام باز شدن صفحه
+setProductTheme(localStorage.getItem("ohad-theme") || "light");
+
+// تغییر تم با کلیک روی دکمه
+const productThemeBtn = document.getElementById("themeBtn");
+
+if (productThemeBtn) {
+  productThemeBtn.addEventListener("click", () => {
+    const isDark = document.body.classList.contains("dark");
+    setProductTheme(isDark ? "light" : "dark");
+  });
+}
+if (currentLanguage !== "fa" && currentLanguage !== "en") {
+  currentLanguage = "fa";
+}
+
+const staticTranslations = {
+  fa: {
+    back: "← بازگشت به محصولات",
+    home: "صفحه اصلی",
+    products: "محصولات",
+    breadcrumb: "مسیر صفحه",
+    eyebrow: "اطلاعات محصول",
+    features: "ویژگی‌های محصول",
+    featuresSubtitle: "قابلیت‌ها و ویژگی‌های اصلی این محصول",
+    specifications: "مشخصات محصول",
+    specificationsSubtitle: "اطلاعات فنی ثبت‌شده برای محصول انتخابی",
+    noSpecifications: "مشخصات فنی برای این محصول ثبت نشده است.",
+    contact: "استعلام و دریافت اطلاعات بیشتر",
+    contactDescription: "برای دریافت قیمت، کاتالوگ و اطلاعات فنی تکمیلی، با واحد فروش OHAD MEDICAL در ارتباط باشید.",
+    contactButton: "ارتباط با واحد فروش",
+    feature: "ویژگی",
+    footer: " — تجهیزات تخصصی بیمارستانی",
+    imageAlt: "تصویر محصول",
+    notFound: "محصول موردنظر پیدا نشد."
+  },
+
+  en: {
+    back: "← Back to Products",
+    home: "Home",
+    products: "Products",
+    breadcrumb: "Breadcrumb",
+    eyebrow: "PRODUCT INFORMATION",
+    features: "Product Features",
+    featuresSubtitle: "Key capabilities and features of this product",
+    specifications: "Product Specifications",
+    specificationsSubtitle: "Technical information registered for the selected product",
+    noSpecifications: "No technical specifications are available for this product.",
+    contact: "Request More Information",
+    contactDescription: "For pricing, catalogs, and additional technical information, please contact the OHAD MEDICAL sales team.",
+    contactButton: "Contact Sales",
+    feature: "Feature",
+    footer: " — Specialized Hospital Equipment",
+    imageAlt: "Product image",
+    notFound: "The requested product could not be found."
+  }
+};
+
+const specificationTranslations = {
+  "ظرفیت بار": "Load Capacity",
+  "تا ۱۴۰ کیلوگرم": "Up to 140 kg",
+  "مدل": "Models",
+  "تک‌بازو و دوبازو": "Single-arm and double-arm",
+  "نوع ترمز": "Brake Type",
+  "پنوماتیک با کنترل دستی": "Manually controlled pneumatic brake"
+};
+
+function renderProduct(lang) {
+  const t = staticTranslations[lang];
+
+  const notice = document.getElementById("notice");
+
+  if (!product) {
+    notice.hidden = false;
+    notice.textContent = t.notFound;
+    return;
+  }
+
+  const isEnglish = lang === "en";
+  const translation = productTranslations[productId] || {};
+
+  document.documentElement.lang = lang;
+  document.documentElement.dir = isEnglish ? "ltr" : "rtl";
+
+  document.title = isEnglish
+    ? `${product.english || product.name} | OHAD MEDICAL`
+    : `${product.name} | OHAD MEDICAL`;
+
+  const descriptionMeta = document.querySelector('meta[name="description"]');
+
+  if (descriptionMeta) {
+    descriptionMeta.content = isEnglish
+      ? `Product information for ${product.english || product.name} - OHAD MEDICAL`
+      : `مشخصات محصولات و تجهیزات پزشکی OHAD MEDICAL`;
+  }
+
+  document.getElementById("languageBtn").textContent =
+    isEnglish ? "FA" : "EN";
+
+  document.getElementById("backLink").textContent = t.back;
+  document.getElementById("homeLink").textContent = t.home;
+  document.getElementById("productsLink").textContent = t.products;
+
+  document.getElementById("breadcrumb").setAttribute(
+    "aria-label",
+    t.breadcrumb
+  );
+
+  document.getElementById("eyebrow").textContent = t.eyebrow;
+
+  document.getElementById("productName").textContent =
+    isEnglish ? product.english || product.name : product.name;
+
+  document.getElementById("productEnglish").textContent =
+    isEnglish ? "" : product.english || "";
+
+  document.getElementById("breadcrumbProduct").textContent =
+    isEnglish ? product.english || product.name : product.name;
+
+  document.getElementById("productCategory").textContent =
+    isEnglish
+      ? translation.category || product.categoryEn || product.category || ""
+      : product.category || "";
+
+  document.getElementById("productDescription").textContent =
+    isEnglish
+      ? translation.description || product.descriptionEn || product.description || ""
+      : product.description || "";
+
+  document.getElementById("featuresTitle").textContent = t.features;
+  document.getElementById("featuresSubtitle").textContent = t.featuresSubtitle;
+
+  document.getElementById("specificationsTitle").textContent =
+    t.specifications;
+
+  document.getElementById("specificationsSubtitle").textContent =
+    t.specificationsSubtitle;
+
+  document.getElementById("contactTitle").textContent = t.contact;
+  document.getElementById("heroContactButton").textContent = t.contact;
+
+  document.getElementById("contactDescription").textContent =
+    t.contactDescription;
+
+  document.getElementById("contactButton").textContent =
+    t.contactButton;
+
+  document.getElementById("footerText").textContent = t.footer;
+
+  document.getElementById("product-hero-image").alt = t.imageAlt;
+
+  // ویژگی‌های محصول
+  const features = isEnglish
+    ? translation.features || product.featuresEn || product.features || []
+    : product.features || [];
+
+  const featuresContainer = document.getElementById("features");
+
+  featuresContainer.innerHTML = features.map((feature, index) => `
+    <article class="feature-card">
+      <div class="feature-number">
+        ${t.feature} ${index + 1}
+      </div>
+      <p>${feature}</p>
+    </article>
+  `).join("");
+
+  // مشخصات فنی
+  const specifications = product.specifications || [];
+
+  const specificationsContainer =
+    document.getElementById("specifications");
+
+  if (specifications.length === 0) {
+    specificationsContainer.innerHTML = `
+      <div class="spec-row">
+        <span>${t.noSpecifications}</span>
+      </div>
+    `;
+  } else {
+    specificationsContainer.innerHTML = specifications.map(item => {
+      const label = isEnglish
+        ? specificationTranslations[item.label] || item.label
+        : item.label;
+
+      const value = isEnglish
+        ? specificationTranslations[item.value] || item.value
+        : item.value;
+
+      return `
+        <div class="spec-row">
+          <span>${label}</span>
+          <strong>${value}</strong>
+        </div>
+      `;
+    }).join("");
+  }
+
+  // تصویر محصول
+  document.getElementById("product-hero-image").src =
+    product.image || "";
+
+  notice.hidden = true;
+}
+
+function setProductLanguage(lang) {
+  if (lang !== "fa" && lang !== "en") {
+    lang = "fa";
+  }
+
+  currentLanguage = lang;
+
+  localStorage.setItem("ohad-language", lang);
+
+  renderProduct(lang);
+}
+
+document.getElementById("languageBtn").addEventListener("click", () => {
+  setProductLanguage(currentLanguage === "fa" ? "en" : "fa");
+});
+
+setProductLanguage(currentLanguage);
+  </script>
+<script>
+/* ذرات نورانی پس‌زمینه صفحات محصول */
+const canvas = document.createElement("canvas");
+canvas.style.cssText = `
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: .5;
+`;
+document.body.prepend(canvas);
+
+const ctx = canvas.getContext("2d");
+let particles = [];
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  particles = Array.from({ length: 40 }, () => ({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    r: Math.random() * 2 + 1,
+    speed: Math.random() * .4 + .15
+  }));
+}
+
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  particles.forEach(p => {
+    p.y -= p.speed;
+
+    if (p.y < 0) {
+      p.y = canvas.height;
+      p.x = Math.random() * canvas.width;
+    }
+
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    ctx.fillStyle = "rgba(0,190,255,.7)";
+    ctx.shadowBlur = 12;
+    ctx.shadowColor = "#00beff";
+    ctx.fill();
+  });
+
+  requestAnimationFrame(animate);
+}
+
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
+animate();
+</script>
+</body>
+
+</html>
